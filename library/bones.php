@@ -127,13 +127,13 @@ function bones_scripts_and_styles() {
   if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
-		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/dest/js/vendors.js', array(), '', '' );
 
 		// register main stylesheet
-		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/dest/css/style.css', array(), '', 'all' );
 
 		// ie-only style sheet
-		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/dest/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -211,8 +211,8 @@ function bones_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
+			'main-nav' => __( 'The Main Menu', 'threshold' ),   // main nav in header
+			'footer-links' => __( 'Footer Links', 'threshold' ) // secondary nav in footer
 		)
 	);
 } /* end bones theme support */
@@ -242,7 +242,7 @@ function bones_related_posts() {
 				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 			<?php endforeach; }
 		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'bonestheme' ) . '</li>'; ?>
+			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'threshold' ) . '</li>'; ?>
 		<?php }
 	}
 	wp_reset_postdata();
@@ -287,7 +287,7 @@ function bones_filter_ptags_on_images($content){
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'bonestheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'threshold' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'threshold' ) .'</a>';
 }
 
 

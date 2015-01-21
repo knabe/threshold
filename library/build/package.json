@@ -21,6 +21,6 @@
     "gulp-rename": "^1.2.0",
     "gulp-scss-lint": "^0.1.4",
     "gulp-uglify": "^0.2.1",
-    "gulp-watch": "^4.0.1",
+    "gulp-watch": "^4.0.1"
   }
 }
