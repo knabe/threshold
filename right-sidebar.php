@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php
+
+/*
+Template Name: Right Sidebar
+*/
+
+get_header();
+
+?>
 <!-- Content -->
 <div id="main" class="container">
     <div class="row double">

@@ -1,34 +1,69 @@
-			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-
-				<div id="inner-footer" class="wrap cf">
-
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-    					'menu' => __( 'Footer Links', 'threshold' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-    					'theme_location' => 'footer-links',             // where it's located in the theme
-    					'before' => '',                                 // before the menu
-    					'after' => '',                                  // after the menu
-    					'link_before' => '',                            // before each link
-    					'link_after' => '',                             // after each link
-    					'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-						)); ?>
-					</nav>
-
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-
-				</div>
-
-			</footer>
-
 		</div>
+		<!-- Footer -->
+        <div id="footer">
+            <div class="container">
 
-		<?php // all js scripts are loaded in library/bones.php ?>
-		<?php wp_footer(); ?>
+                <!-- Footer List -->
+                    <div id="contact">
+                        <ul>
+                            <li>
+                                <div class="p-icon">
+                                    <span class="fa fa-cog"></span>
+                                </div>
+                                <span>
+                                    1234 Fictional Road Suite<br />
+                                    #789 Nashville, TN 00000
+                                </span>
+                            </li>
+                            <li>
+                                <div class="p-icon">
+                                    <span class="fa fa-anchor"></span>
+                                </div>
+                                <span><a href="#">info@untitled.com</a><br />
+                                <a href="#">contact@untitled.com</a></span>
+                            </li>
+                            <li>
+                                <div class="p-icon">
+                                    <span class="fa fa-user"></span>
+                                </div>
+                                <span>(000) 555-555-5555<br /> (000) 888-888-8888</span>
+                            </li>
+                            <li>
+                                <div class="p-icon">
+                                    <span class="fa fa-envelope"></span>
+                                </div>
+                                <span><a href="#">@untitled-corp</a><br />
+                                <a href="#">facebook.com/untitled-corp</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                <!-- /Footer List -->
 
+
+                <!-- Newsletter -->
+                    <div id="newsletter">
+                        <div class="row">
+                            <section class="6u">
+                                <span>Fusce lobortis lorem at ipsum semper sagittis sui unteconvil sitamet interdium</span>
+                            </section>
+                            <section class="6u">
+                                <form method="post" action="#" id="subscribe">
+                                    <input type="text" class="text" name="search" placeholder="Your email address" />
+                                    <a href="#" class="submit">Subscribe</a>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                <!-- /Newsletter -->
+
+                <!-- Copyright -->
+                    <div id="copyright">
+                        &copy; Untitled. All rights Reserved
+                    </div>
+                <!-- /Copyright -->
+
+            </div>
+        </div>
+		<?php wp_footer() ?>
 	</body>
-
-</html> <!-- end of site. what a ride! -->
+</html>
