@@ -14,8 +14,8 @@
         </section>
         <section class="6u skel-cell-important">
             <div id="box1">
-                <div id="box2"><img src="<?php echo get_template_directory_uri() ?>/images/pic01.jpg" alt="" class="image full" /></div>
-                <div id="box3"><img src="<?php echo get_template_directory_uri() ?>/images/pic02.jpg" alt="" class="image full" /></div>
+                <div id="box2"><img src="<?php echo get_template_directory_uri() ?>/library/images/pic01.jpg" alt="" class="image full" /></div>
+                <div id="box3"><img src="<?php echo get_template_directory_uri() ?>/library/images/pic02.jpg" alt="" class="image full" /></div>
             </div>
         </section>
     </div>
@@ -25,7 +25,7 @@
 <!-- Extra #1 -->
 <div id="extra" class="container">
     <ul>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/pic03.jpg" alt="" class="image full" /></a></li>
+        <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/library/images/pic03.jpg" alt="" class="image full" /></a></li>
         <li>
             <div class="content">
                 <h3>Integer vitae libero acrisus egestas placerat  sollicitudin leo</h3>
@@ -73,7 +73,7 @@
     <div class="row">
 
         <section class="4u">
-            <div class="image-border"><img src="<?php echo get_template_directory_uri() ?>/images/pic04.jpg" alt="" class="image full" /></div>
+            <div class="image-border"><img src="<?php echo get_template_directory_uri() ?>/library/images/pic04.jpg" alt="" class="image full" /></div>
         </section>
 
         <section class="8u">
