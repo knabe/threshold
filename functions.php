@@ -1,11 +1,7 @@
 <?php
 /*
-Author: Eddie Machado
-URL: http://themble.com/bones/
-
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images,
-sidebars, comments, ect.
+Author: Pixelarity
+URL: http://pixelarity.com
 */
 
 // LOAD BONES CORE (if you remove this, the theme will break)
@@ -15,16 +11,15 @@ require_once( 'library/bones.php' );
 // require_once( 'library/admin.php' );
 
 /*********************
-LAUNCH BONES
-Let's get everything up and running.
+Bones Initialization
 *********************/
 
 function bones_ahoy() {
 
-  //Allow editor style.
+  // Allow editor style.
   add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
-  // let's get language support going, if you need it
+  // Language Support
   load_theme_textdomain( 'threshold', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
@@ -43,8 +38,8 @@ function bones_ahoy() {
   // clean up gallery output in wp
   add_filter( 'gallery_style', 'bones_gallery_style' );
 
-  // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'bones_scripts_and_styles', 999 );
+  // Enqueue Scripts and Styles
+  add_action( 'wp_enqueue_scripts', 'crystalline_scripts_init', 999 );
   // ie conditional wrapper
 
   // launching this stuff after theme setup
@@ -60,58 +55,32 @@ function bones_ahoy() {
 
 } /* end bones ahoy */
 
-// let's get this party started
 add_action( 'after_setup_theme', 'bones_ahoy' );
 
-
-/************* OEMBED SIZE OPTIONS *************/
+/************* oEmbed Size Options *************/
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 640;
 }
 
-/************* THUMBNAIL SIZE OPTIONS *************/
+/************* Thumbnail Size Options *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'crystalline-thumb-600', 600, 600, true );
 
 /*
-to add more sizes, simply copy a line from above
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
-
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 100 sized image,
+To call the 600 x 600 sized image,
 we would use the function:
-<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-for the 600 x 150 image:
-<?php the_post_thumbnail( 'bones-thumb-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
+<?php the_post_thumbnail( 'crystalline-thumb-600' ); ?>
 */
 
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-300' => __('300px by 100px'),
+        'crystalline-thumb-600' => __('600px by 600px'),
     ) );
 }
-
-/*
-The function above adds the ability to use the dropdown menu to select
-the new images sizes you have just created from within the media manager
-when you add media to your content blocks. If you add more image sizes,
-duplicate one of the lines in the array and name it according to your
-new image size.
-*/
 
 /************* THEME CUSTOMIZE *********************/
 
@@ -150,48 +119,22 @@ function bones_theme_customizer($wp_customize) {
 
 add_action( 'customize_register', 'bones_theme_customizer' );
 
-/************* ACTIVE SIDEBARS ********************/
+/************* Sidebars ********************/
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
-	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'threshold' ),
-		'description' => __( 'The first (primary) sidebar.', 'threshold' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
-
-	Just change the name to whatever your new
-	sidebar's id is, for example:
-
-	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'threshold' ),
-		'description' => __( 'The second (secondary) sidebar.', 'threshold' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
-
-	*/
-} // don't remove this bracket!
+	register_sidebar( array(
+		'name' => __( 'Sidebar' ),
+		'id' => 'main-sidebar',
+		'before_widget' => '<section id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<header><h2 class="widget-title">',
+		'after_title' => '</h2></header>',
+	) );
+}
 
 
-/************* COMMENT LAYOUT *********************/
+/************* Comment Layout *********************/
 
 // Comment Layout
 function bones_comments( $comment, $args, $depth ) {
@@ -228,16 +171,10 @@ function bones_comments( $comment, $args, $depth ) {
     </article>
   <?php // </li> is added by WordPress automatically ?>
 <?php
-} // don't remove this bracket!
+}
 
 
-/*
-This is a modification of a function found in the
-twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you
-can replace these fonts, change it in your scss files
-and be up and running in seconds.
-*/
+/* Call Google Fonts here */
 function bones_fonts() {
   wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
@@ -251,4 +188,4 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 		'comment-form'
 	) );
 
-/* DON'T DELETE THIS CLOSING TAG */ ?>
+?>
