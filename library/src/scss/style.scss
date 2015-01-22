@@ -814,7 +814,7 @@
 			top: 0;
 			right: 0;
 			padding: 1.5em 3em 3.5em 3em;
-			background: url(images/laptop.png) no-repeat center top;
+			background: url(../../images/laptop.png) no-repeat center top;
 		}
 	
 		#mobile
@@ -823,7 +823,7 @@
 			bottom: 1.3em;
 			left: 0.8em;
 			padding: 1.5em 0.6em 1.3em 0.6em;
-			background: url(images/phone.png) no-repeat center top;
+			background: url(../../images/phone.png) no-repeat center top;
 			z-index: 1;
 		}
 
@@ -843,7 +843,7 @@
 		.homepage #wrapper
 		{
 			padding: 0em 0em 3em 0em;
-			background: #181719 url(images/bg01.png) repeat-x;
+			background: #181719 url(../../images/bg01.png) repeat-x;
 		}
 
 /*********************************************************************************/
@@ -932,7 +932,7 @@
 		{
 			display: block;
 			padding: 8% 9% 8% 9%;
-			background: url(images/tablet.png) no-repeat center top;
+			background: url(../../images/tablet.png) no-repeat center top;
 			background-size: contain;
 		}
 
@@ -1237,7 +1237,7 @@
 		width: 552px;
 		height: 326px;
 		padding: 26px 60px 35px 60px;
-		background: url(images/laptop.png) no-repeat center bottom;
+		background: url(../../images/laptop.png) no-repeat center bottom;
 		background-size: auto 100%;
 	}
 	
@@ -1250,6 +1250,6 @@
 		width: 100px;
 		height: 175px;
 		padding: 26px 8px 0px 8px;
-		background: url(images/phone.png) no-repeat center bottom;
+		background: url(../../images/phone.png) no-repeat center bottom;
 		background-size: auto 100%;
 	}
