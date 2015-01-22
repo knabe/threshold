@@ -14,7 +14,6 @@ var gulp = require('gulp'),
 
     //Styles task
     gulp.task('styles', function() {
-
         return gulp.src('../src/scss/*.scss')
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(sass())
@@ -24,9 +23,14 @@ var gulp = require('gulp'),
 
 
     // JS //
-    gulp.task('scripts', function() {
+    gulp.task('vendor-scripts', function() {
         return gulp.src( ['../src/js/libs/*.js'] )
         .pipe(concat('vendors.js'))
+        .pipe(gulp.dest('../dest/js/'))
+    });
+
+    gulp.task('scripts', function() {
+        return gulp.src( ['../src/js/*.js'] )
         .pipe(gulp.dest('../dest/js/'))
     });
 
@@ -34,7 +38,8 @@ var gulp = require('gulp'),
     // Assign Default Gulp task //
     gulp.task('default', [
         'styles',
-        'scripts'
+        'scripts',
+        'vendor-scripts'
         ], function() {
             gulp.start('complete');
             gulp.start('watch');
