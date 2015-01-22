@@ -57,6 +57,20 @@ function bones_ahoy() {
 
 add_action( 'after_setup_theme', 'bones_ahoy' );
 
+/************* Register and Enqueue Scripts and Styles *************/
+
+function crystalline_scripts_init(){
+    wp_enqueue_script('vendors', get_template_directory_uri() . '/library/dest/js/vendors.js');
+
+    wp_register_script('init', get_template_directory_uri() . '/library/dest/js/init.js', 'vendors');
+
+    $initTrans = array( 'directory' => get_template_directory_uri());
+    wp_localize_script( 'init', 'skelWP', $initTrans );
+
+    // Enqueue Initialize
+    wp_enqueue_script('init');
+}
+
 /************* oEmbed Size Options *************/
 
 if ( ! isset( $content_width ) ) {
