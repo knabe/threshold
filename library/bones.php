@@ -211,8 +211,8 @@ function bones_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'threshold' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'threshold' ) // secondary nav in footer
+			'main-nav' => __( 'Primary Navigation', 'threshold' ),   // main nav in header
+			'footer-nav' => __( 'Footer Navigation', 'threshold' ) // secondary nav in footer
 		)
 	);
 } /* end bones theme support */
