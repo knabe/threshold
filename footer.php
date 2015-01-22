@@ -58,7 +58,7 @@
 
                 <!-- Copyright -->
                     <div id="copyright">
-                        &copy; Untitled. All rights Reserved
+                        &copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'title' ); ?> All Rights Reserved
                     </div>
                 <!-- /Copyright -->
 
