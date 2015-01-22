@@ -60,3 +60,7 @@ temp/
 **/node_modules/
 
 /library/dest/
+/library/src/scss/style.css.map
+/library/src/scss/style.css
+/library/src/scss/style-mobile.css
+/library/src/scss/style-mobile.css.map
