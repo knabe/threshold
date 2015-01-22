@@ -1,0 +1,221 @@
+/*
+	Threshold by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+	}
+
+	body,input,textarea,select
+	{
+		font-size: 12pt;
+	}
+
+	/* Lists */
+
+		ul.list
+		{
+		}
+
+			ul.list li
+			{
+				width: 43%;
+				margin: 0em 1.00em 3.4em 1.00em;
+				padding: 0em;
+				display: inline-block;
+			}
+			
+				ul.list li:first-child
+				{
+					margin-top: 0;
+				}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		padding: 4em 0em 4em 0em;
+	}
+	
+		#banner header
+		{
+		}
+	
+			#banner header h2
+			{
+			}
+		
+			#banner header .byline
+			{
+				font-size: 1.3em;
+			}
+			
+		#banner .button
+		{
+		}
+		
+		#devices
+		{
+			height: 20.1em;
+			min-height: 20.1em;
+		}
+
+		#laptop
+		{
+			width: 480px;
+			height: 450px !important;
+			float: none;
+			position: relative;
+			left: 50%;
+			margin-left: -240px;
+			padding: 1.4em 3.4em 3.5em 3.4em;
+			background-size: 100%;
+		}
+	
+		#mobile
+		{
+			bottom: 1.6em;
+			left: 50%;
+			margin-left: -240px;
+			width: 80px;
+			padding: 1.4em 0.45em 1.0em 0.45em;
+			height: 150px !important;
+			background-size: 100%;
+		}
+
+/*********************************************************************************/
+/* Extra #1                                                                      */
+/*********************************************************************************/		
+
+	#extra
+	{
+	}
+	
+		#extra h3
+		{
+			font-size: 1.3em;
+		}
+
+		#extra .content
+		{
+			padding: 2em 2em 0em 2em;
+		}
+		
+		#extra .button
+		{
+			margin-top: 0.5em;
+		}
+		
+		#extra ul
+		{
+		}
+	
+			#extra ul li
+			{
+			}
+			
+			#extra ul img
+			{
+				display: block;
+				height: 100%;
+			}
+			
+			#extra p
+			{
+				font-size: 0.90em !important;
+			}
+
+/*********************************************************************************/
+/* Pennant                                                                       */
+/*********************************************************************************/		
+
+	.pennant
+	{
+		width: 5em;
+		height: 5em;
+	}
+		
+		.pennant:before
+		{
+			position: absolute;
+			content: " ";
+			top: 0;
+			left: 0;
+			border: 5px solid #282729;
+			border-radius: 10px;
+			display: inline-block;
+			width: 5em;
+			height: 5em;
+			text-align: center;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+
+		.pennant .fa
+		{
+			line-height: 5em;
+			height: 5em;
+			width: 5em;
+		}
+
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/		
+
+
+	#featured
+	{
+	}
+	
+		#featured .image-border
+		{
+		}
+
+/*********************************************************************************/
+/* Contact                                                                       */
+/*********************************************************************************/
+
+	#contact
+	{
+	}
+	
+		#contact ul
+		{
+			font-size: 0.95em !important;
+		}
+
+
+/*********************************************************************************/
+/* Device Image                                                                  */
+/*********************************************************************************/
+
+	#box1
+	{
+		height: 260px;
+		margin-bottom: 1em;
+	}		
+
+	#box2
+	{
+		width: 100%;
+		height: 260px;
+		padding: 20px 58px 0px 58px;
+	}
+	
+	#box3
+	{
+		left: 0;
+		height: 145px;
+		padding: 21px 15px 0px 15px;
+	}

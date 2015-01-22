@@ -1,0 +1,377 @@
+/*
+	Threshold by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		font-size: 11pt;
+	}
+
+	form
+	{
+		width: 100%;
+	}
+	
+	/* Lists */
+	
+		ul.featured
+		{
+		}
+	
+			ul.featured li
+			{
+				width: 40% !important;
+				margin: 0 2.5% 5% 0;
+			}
+
+
+		ul.list
+		{
+			text-align: center;
+		}
+	
+			ul.list li
+			{
+			}
+
+		ul.lists
+		{
+		}
+	
+			ul.lists li
+			{
+				margin-bottom: 2em;
+				padding: 0em 1.5em;
+			}
+			
+		ul.default
+		{
+		}
+		
+			ul.default li
+			{
+				margin-bottom: 0em !important;
+			}
+	
+	ul.staff
+	{
+	}
+
+		ul.staff li
+		{
+			margin: 0 0.50em;
+		}
+		
+		ul.staff img
+		{
+		}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	#nav
+	{
+	}
+
+		#nav > ul > li
+		{
+			margin-left: 1.5em;
+		}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		padding: 6em 0em;
+	}
+	
+	#logo
+	{
+		position: relative;
+		left: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+		#logo h1
+		{
+			display: block;
+			text-align: center;
+		}
+		
+			#logo h1 a
+			{
+				font-size: 2.2em;
+			}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	#nav
+	{
+		position: absolute;
+		left: 0em;
+		top: 4em;
+		right: 0;
+	}
+	
+		#nav > ul
+		{
+			text-align: center;
+		}
+
+		#nav > ul > li
+		{
+			float: none;
+			display: inline-block;
+		}
+		
+			#nav > ul > li:last-child
+			{
+				padding-right: 0;
+			}
+
+			#nav > ul > li > a,
+			#nav > ul > li > span
+			{
+				display: block;
+			}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		padding: 2em 0em 2em 0em !important;
+	}
+	
+		#banner header
+		{
+			padding: 0em 1em;
+			text-align: center;
+		}
+	
+			#banner header h2
+			{
+				font-size: 1.8em;
+			}
+		
+			#banner header .byline
+			{
+				font-size: 1.3em;
+			}
+			
+		#banner .button
+		{
+			display: block;
+			width: 100% !important;
+			max-width: 320px;
+			margin: 0 auto;
+			padding: 0.70em 1em !important;
+		}
+		
+		#devices
+		{
+			height: 20.1em;
+			min-height: 20.1em;
+		}
+
+		#laptop
+		{
+			width: 480px;
+			height: 450px !important;
+			float: none;
+			position: relative;
+			left: 50%;
+			margin-left: -240px;
+			padding: 1.4em 3.4em 3.5em 3.4em;
+			background-size: 100%;
+		}
+	
+		#mobile
+		{
+			bottom: 0;
+			left: 50%;
+			margin-left: -240px;
+			width: 80px;
+			padding: 1.4em 0.45em 1.0em 0.45em;
+			height: 150px !important;
+			background-size: 100%;
+		}
+
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	#content
+	{
+		overflow: hidden;
+		margin-bottom: 2em !important;
+	}
+
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/		
+
+
+	#featured
+	{
+	}
+	
+		#featured .image-border
+		{
+			margin: 0em auto 2em auto;
+			width: 360px;
+			padding: 1.8em 2em 2em 2em;
+		}
+
+/*********************************************************************************/
+/* Extra #1                                                                      */
+/*********************************************************************************/		
+
+	#extra
+	{
+	}
+	
+		#extra h3
+		{
+		}
+
+		#extra .content
+		{
+			padding: 3em 2.2em 3em 2.2em;
+		}
+		
+		#extra .button
+		{
+			margin-top: 1.5em;
+		}
+		
+		#extra ul
+		{
+			text-align: center;
+		}
+	
+			#extra ul li
+			{
+				display: block;
+				float: none;
+				width: 100%;
+			}
+			
+			#extra ul img
+			{
+				border-radius: 6px 6px 0px 0px;
+			}
+
+/*********************************************************************************/
+/* Extra #2                                                                      */
+/*********************************************************************************/		
+
+	#extra2
+	{
+		text-align: center;
+	}
+
+	
+		#extra2 header
+		{
+			margin-bottom: 3em;
+			padding-right: 0;
+		}
+
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+	
+	#footer
+	{
+	}
+
+/*********************************************************************************/
+/* Contact                                                                       */
+/*********************************************************************************/
+
+	#contact
+	{
+	}
+	
+		#contact ul
+		{
+			position: relative;
+		}
+	
+			#contact li
+			{
+				display: inline-block;
+				width: 45% !important;
+				font-size: 0.95em;
+			}
+		
+
+/*********************************************************************************/
+/* Newsletter                                                                    */
+/*********************************************************************************/
+
+	#newsletter
+	{
+	}
+
+	#newsletter span
+	{
+		display: block;
+		padding-bottom: 3em !important;
+	}
+		#newsletter section
+		{
+			padding: 0em 2em !important;
+		}
+
+
+/*********************************************************************************/
+/* Device Image                                                                  */
+/*********************************************************************************/
+
+	#box1
+	{
+		width: 400px;
+		height: 260px;
+		margin: 0em auto 4em auto;
+	}		
+
+	#box2
+	{
+		width: 100%;
+		height: 240px;
+		padding: 19px 42px 0px 42px !important;
+	}
+	
+	#box3
+	{
+		left: -1em !important;
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

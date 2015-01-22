@@ -1,0 +1,505 @@
+/*
+	Threshold by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		line-height: 1.75em;
+		font-size: 11pt;
+	}
+
+	body
+	{
+		padding-top: 0;
+	}
+
+	h2, h3, h4, h5, h6
+	{
+		font-size: 1.5em;
+	}
+
+	section,
+	article
+	{
+		clear: both;
+		margin: 2em 0 2em 0 !important;
+	}
+
+	section > :first-child,
+	article > :first-child
+	{
+		margin-top: 0 !important;
+	}
+
+	section:first-child,
+	article:first-child
+	{
+		margin-top: 0 !important;
+	}
+
+	/* Lists */
+
+		ul.list
+		{
+			text-align: center;
+			overflow: hidden;
+		}
+
+			ul.list li
+			{
+				display: block;
+				width: 100%;
+				margin: 0em;
+				padding: 4em 0em 0em 0em;
+			}
+			
+				ul.list li:first-child
+				{
+					padding-top: 0em !important;
+				}
+				
+			ul.list .button
+			{
+				margin-top: 2em;
+			}
+
+
+		ul.icon
+		{
+			
+		}
+		
+			ul.icon li
+			{
+				padding: 2em 0em;
+				
+			}
+		
+			ul.icon li:last-child
+			{
+				padding-bottom: 0;
+			}
+
+		ul.actions
+		{
+		}
+	
+			ul.actions li
+			{
+				display: block;
+			}
+
+	.button
+	{
+		display: block;
+		width: 100% !important;
+		padding: 0.70em 1em !important;
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		padding: 4.5em 0em 3.5em 0em;
+	}
+	
+	#logo
+	{
+	}
+	
+		#logo h1
+		{
+		}
+		
+			#logo h1 a
+			{
+				font-size: 2.25em;
+			}
+	
+	#nav
+	{
+		display: none;
+	}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		padding: 4em 0em 2em 0em;
+	}
+	
+		#banner header
+		{
+			padding: 0em 1em;
+			text-align: center;
+		}
+	
+			#banner header h2
+			{
+				font-size: 1.8em;
+			}
+		
+			#banner header .byline
+			{
+				font-size: 1.3em;
+			}
+			
+		#banner .button
+		{
+			margin-top: 0.50em;
+			padding: 0em 1em;
+			line-height: 2em;
+			font-size: 1em;
+		}
+		
+		#devices
+		{
+		}
+
+		#laptop
+		{
+			width: 340px;
+			height: 250px !important;
+			float: none;
+			position: relative;
+			left: 50%;
+			margin-left: -170px;
+			padding: 1.1em 2.5em 3.5em 2.5em;
+			background-size: 100%;
+		}
+		
+		#laptop img
+		{
+		}
+	
+		#mobile
+		{
+			bottom: 0;
+			left: 50%;
+			margin-left: -120px;
+			width: 60px;
+			padding: 1.2em 0.4em 0.0em 0.4em;
+			height: 127px !important;
+			background-size: 100%;
+		}
+		
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+	
+	#wrapper
+	{
+		padding: 3em 0em 3em 0em;
+	}
+	
+		.homepage #wrapper
+		{
+			padding: 0em 0em 3em 0em;
+			background: #181719 url(images/bg01.png) repeat-x;
+		}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+	}
+	
+		#main .button
+		{
+			margin-top: 2em;
+		}
+	
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	#content
+	{
+	}
+
+		#content header
+		{
+		}
+
+			#content header h2
+			{
+				font-size: 2.1em
+			}
+	
+			#content header .byline
+			{
+				font-size: 1.2em;
+			}
+
+		#content h3
+		{
+			font-size: 1.1em;
+		}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	#sidebar,
+	#sidebar2
+	{
+	}
+
+		#sidebar section,
+		#sidebar2 section
+		{
+			margin-bottom: 4em !important;
+		}
+
+		#sidebar section:last-child,
+		#sidebar2 section:last-child
+		{
+			margin-bottom: 0em !important;
+		}
+
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/		
+
+
+	#featured
+	{
+	}
+	
+		#featured .image-border
+		{
+			width: 100% !important;
+			padding: 8% 9% 8% 9%;
+		}
+		
+/*********************************************************************************/
+/* Extra #1                                                                      */
+/*********************************************************************************/		
+
+	#extra
+	{
+	}
+	
+		#extra h3
+		{
+		}
+
+		#extra .content
+		{
+			padding: 3em 2.2em 3.5em 2.2em;
+		}
+		
+		#extra .button
+		{
+			margin-top: 2.50em;
+		}
+		
+		#extra ul
+		{
+			text-align: center;
+		}
+	
+			#extra ul li
+			{
+				display: block;
+				float: none;
+				width: 100%;
+			}
+			
+			#extra ul img
+			{
+				border-radius: 6px 6px 0px 0px;
+			}
+		
+/*********************************************************************************/
+/* Extra #2                                                                      */
+/*********************************************************************************/		
+
+	#extra2
+	{
+		padding: 4em 0em 2em 0em;
+		text-align: center;
+	}
+	
+		#extra2 header
+		{
+			margin-bottom: 0;
+			padding-right: 0;
+		}
+
+/*********************************************************************************/
+/* Newsletter                                                                    */
+/*********************************************************************************/
+
+	#newsletter
+	{
+		padding: 3em 0em 1.5em 0em;
+	}
+
+		#newsletter section
+		{
+			text-align: center;
+		}
+
+	#newsletter span
+	{
+		padding-bottom: 1em !important;
+	}
+
+/*********************************************************************************/
+/* Contact                                                                       */
+/*********************************************************************************/
+
+	#contact
+	{
+		padding: 4em 0em 3em 0em;
+	}
+	
+		#contact ul
+		{
+			position: relative;
+		}
+	
+			#contact li
+			{
+				display: block;
+				width: 100% !important;
+				margin-top: 2em;
+				padding: 0;
+			}
+			
+			#contact li:first-child
+			{
+				margin-top: 0;
+			}
+
+/*********************************************************************************/
+/* Device Image                                                                  */
+/*********************************************************************************/
+
+	#box1
+	{
+		position: relative;
+		width: 220px;
+		height: 140px !important;
+		left: 50%;
+		margin-left: -110px;
+		margin-bottom: 0em !important;
+	}		
+
+	#box2
+	{
+		display: block;
+		width: 100% !important;
+		height: 140px !important;
+		background-size: auto 100%;
+		padding: 12px 18px 0px 18px !important;
+	}
+
+		#box2 img
+		{
+		}
+
+	#box3
+	{
+		display: block;
+		left: -.90em;
+		bottom: 0;
+		width: 50px;
+		height: 85px;
+		background-size: auto 100%;
+		padding: 14px 5px 0px 5px;
+	}
+
+/*********************************************************************************/
+/* UI                                                                            */
+/*********************************************************************************/
+
+	#titleBar
+	{
+		background: none;
+	}
+
+		#titleBar .title
+		{
+			display: none;
+		}
+
+		#titleBar .toggle
+		{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 80px;
+			height: 60px;
+		}
+
+			#titleBar .toggle:before
+			{
+				content: '';
+				position: absolute;
+				left: 7px;
+				top: 7px;
+				background: rgba(0,0,0,0.2);
+				width: 60px;
+				height: 44px;
+				border-radius: 4px;
+			}
+
+			#titleBar .toggle:after
+			{
+				content: '';
+				display: block;
+				width: 20px;
+				height: 12px;
+				position: absolute;
+				left: 28px;
+				top: 23px;
+				background: url('images/toggle.svg') 0px 0px no-repeat;
+				opacity: 0.7;
+			}
+
+			#titleBar .toggle:active:after
+			{
+				opacity: 0.9;
+			}
+
+	#navPanel
+	{
+		background: #1d1d1d;
+	}
+
+		#navPanel .link
+		{
+			display: block;
+			color: #888;
+			text-decoration: none;
+			height: 44px;
+			line-height: 44px;
+			border-top: solid 1px rgba(255,255,255,.05);
+			padding: 0 1em 0 1em;
+		}
+		
+			#navPanel .link.depth-0
+			{
+				color: #fff;
+			}
+
+			#navPanel .indent-1 { display: inline-block; width: 1em; }
+			#navPanel .indent-2 { display: inline-block; width: 2em; }
+			#navPanel .indent-3 { display: inline-block; width: 3em; }
+			#navPanel .indent-4 { display: inline-block; width: 4em; }
+			#navPanel .indent-5 { display: inline-block; width: 5em; }
+			#navPanel .depth-0 { color: #fff; }
