@@ -91,6 +91,7 @@ function optionsframework_options() {
 		'name' => __('Address', 'options_check'),
 		'desc' => __('Enable Address Box', 'options_check'),
 		'id' => 'footer_address_check',
+        'class' => 'has_hidden_child',
 		'type' => 'checkbox');
 
 	$options[] = array(
@@ -110,6 +111,7 @@ function optionsframework_options() {
 		'name' => __('E-mail', 'options_check'),
 		'desc' => __('Enable E-mail Box', 'options_check'),
 		'id' => 'footer_email_check',
+        'class' => 'has_hidden_child',
 		'type' => 'checkbox');
 
 	$options[] = array(
@@ -123,6 +125,7 @@ function optionsframework_options() {
 		'name' => __('Telephone', 'options_check'),
 		'desc' => __('Enable Telephone Box', 'options_check'),
 		'id' => 'footer_telephone_check',
+        'class' => 'has_hidden_child',
 		'type' => 'checkbox');
 
 	$options[] = array(
@@ -136,6 +139,7 @@ function optionsframework_options() {
 		'name' => __('Social Media', 'options_check'),
 		'desc' => __('Enable Social Media', 'options_check'),
 		'id' => 'footer_social_check',
+        'class' => 'has_hidden_child',
 		'type' => 'checkbox');
 
 	$options[] = array(
