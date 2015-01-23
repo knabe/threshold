@@ -16,6 +16,9 @@ require_once( 'library/bones.php' );
  *
  * This code allows the theme to work without errors if the Options Framework plugin has been disabled.
  */
+
+require_once( 'options-functions.php' );
+
 if ( !function_exists( 'of_get_option' ) ) {
     function of_get_option($name, $default = false) {
         $optionsframework_settings = get_option('optionsframework');
