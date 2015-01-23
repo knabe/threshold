@@ -145,7 +145,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('Social Networks', 'options_check'),
 		'desc' => __('Choose which social networks to display.', 'options_check'),
-		'id' => 'footer_social_multicheck',
+		'id' => 'footer_social',
         'class' => 'hidden',
 		'type' => 'multicheck',
 		'options' => $social_multicheck_array);
