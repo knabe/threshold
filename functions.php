@@ -200,4 +200,55 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 		'comment-form'
 	) );
 
+// Contact sections in footer of Threshold. Depends on Options Framework.
+function threshold_footer_sections(){
+
+    // Could probably pull these in dynamically via options.php or a separate function
+    $sections = array(
+        'footer_address' => 'footer_address_check',
+        'footer_email' => 'footer_email_check',
+        'footer_telephone' => 'footer_telephone_check',
+        'footer_social' => 'footer_social_check'
+    );
+
+    // Start output
+    $markup = '';
+    $markup .= '<ul>';
+
+    foreach($sections as $section => $id){
+        // Is the 'enable' box checked?
+        if(of_get_option($id)){
+            $markup .= '<li>';
+
+            // Will change to corresponding section icons.
+            $markup .= '<div class="p-icon"><span class="fa fa-cog"></span></div>';
+            $markup .= '<span>';
+
+            if($section == 'footer_address'){
+                $markup .= '<a href="mailto:'. of_get_option($section) .'">' . of_get_option($section) . '</a>';
+            }
+
+            if($section == 'footer_email'){
+                $markup .= '<a href="mailto:'. of_get_option($section) .'">' . of_get_option($section) . '</a>';
+            }
+
+            if($section == 'footer_telephone'){
+                $markup .= '<a href="tel:'. of_get_option($section) .'">' . of_get_option($section) . '</a>';
+            }
+
+            // Add social links. Create an array of all enabled social networks?
+            if($section == 'footer_social'){
+
+            }
+
+            $markup .= '<span>';
+            $markup .= '</li>';
+        }
+    }
+
+    $markup .= '</ul>';
+
+    echo $markup;
+}
+
 ?>
