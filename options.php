@@ -37,7 +37,7 @@ function optionsframework_options() {
 	);
 
     // Social Array
-	$social_multicheck_array = array(
+	$social_array = array(
 		'facebook' => __('Facebook', 'options_check'),
 		'twitter' => __('Twitter', 'options_check'),
 		'google' => __('Google+', 'options_check')
@@ -94,6 +94,7 @@ function optionsframework_options() {
         'class' => 'has_hidden_child',
 		'type' => 'checkbox');
 
+    // Needs a second line
 	$options[] = array(
 		'name' => __('Your Address', 'options_check'),
 		'id' => 'footer_address',
@@ -143,7 +144,7 @@ function optionsframework_options() {
 		'id' => 'footer_social',
         'class' => 'hidden',
 		'type' => 'multicheck',
-		'options' => $social_multicheck_array);
+		'options' => $social_array);
 
     // Begin Social Media
     $options[] = array(
