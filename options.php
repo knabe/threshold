@@ -90,17 +90,17 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('Address', 'options_check'),
 		'desc' => __('Enable Address Box', 'options_check'),
-		'id' => 'footer_address_showhidden',
+		'id' => 'footer_address_check',
 		'type' => 'checkbox');
 
 	$options[] = array(
 		'name' => __('Your Address', 'options_check'),
-		'id' => 'footer_address_one_text_hidden',
+		'id' => 'footer_address_one',
 		'class' => 'hidden',
 		'type' => 'text');
 
     $options[] = array(
-		'id' => 'footer_address_two_text_hidden',
+		'id' => 'footer_address_two',
 		'class' => 'hidden',
 		'type' => 'text');
 
@@ -109,12 +109,12 @@ function optionsframework_options() {
     $options[] = array(
 		'name' => __('E-mail', 'options_check'),
 		'desc' => __('Enable E-mail Box', 'options_check'),
-		'id' => 'footer_email_showhidden',
+		'id' => 'footer_email_check',
 		'type' => 'checkbox');
 
 	$options[] = array(
 		'name' => __('Your E-mail', 'options_check'),
-		'id' => 'footer_email_text_hidden',
+		'id' => 'footer_email',
 		'class' => 'hidden',
 		'type' => 'text');
 
@@ -122,12 +122,12 @@ function optionsframework_options() {
     $options[] = array(
 		'name' => __('Telephone', 'options_check'),
 		'desc' => __('Enable Telephone Box', 'options_check'),
-		'id' => 'footer_telephone_showhidden',
+		'id' => 'footer_telephone_check',
 		'type' => 'checkbox');
 
 	$options[] = array(
 		'name' => __('Your Telephone', 'options_check'),
-		'id' => 'footer_telephone_text_hidden',
+		'id' => 'footer_telephone',
 		'class' => 'hidden',
 		'type' => 'text');
 
@@ -135,7 +135,7 @@ function optionsframework_options() {
     $options[] = array(
 		'name' => __('Social Media', 'options_check'),
 		'desc' => __('Enable Social Media', 'options_check'),
-		'id' => 'footer_social_showhidden',
+		'id' => 'footer_social_check',
 		'type' => 'checkbox');
 
 	$options[] = array(
