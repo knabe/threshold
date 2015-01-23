@@ -96,12 +96,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __('Your Address', 'options_check'),
-		'id' => 'footer_address_one',
-		'class' => 'hidden',
-		'type' => 'text');
-
-    $options[] = array(
-		'id' => 'footer_address_two',
+		'id' => 'footer_address',
 		'class' => 'hidden',
 		'type' => 'text');
 
