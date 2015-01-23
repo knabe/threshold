@@ -5,17 +5,24 @@
     <div class="row double">
         <section class="6u">
             <div id="one">
+                <?php $feature = threshold_get_feature_box(); ?>
                 <header>
-                    <h2>Donec nec justo eget jelis facilisis</h2>
-                    <span class="byline">Cestibulum auctor dapibus neque euismod inpharetra ultricies indiamed arcu</span>
+                    <?php if($feature['heading']){ ?>
+                    <h2><?php echo $feature['heading'] ?></h2>
+                    <?php } ?>
+
+                    <?php if($feature['subheading']){ ?>
+                    <span class="byline"><?php echo $feature['subheading'] ?></span>
+                    <?php } ?>
                 </header>
-                <a href="#" class="button">Gravida beci</a>
+
+                <a href="<?php echo $feature['page']['link'] ?>" class="button">Click Here</a>
             </div>
         </section>
         <section class="6u skel-cell-important">
-            <div id="box1">
-                <div id="box2"><img src="<?php echo get_template_directory_uri() ?>/library/images/pic01.jpg" alt="" class="image full" /></div>
-                <div id="box3"><img src="<?php echo get_template_directory_uri() ?>/library/images/pic02.jpg" alt="" class="image full" /></div>
+            <?php if($feature['image']){ ?>
+            <a href="<?php echo $feature['page']['link'] ?>"><img src="<?php echo $feature['image'] ?>" alt="" class="image full" /></a>
+            <?php } ?>
             </div>
         </section>
     </div>

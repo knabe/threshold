@@ -70,7 +70,7 @@ function optionsframework_options() {
 
 	$options = array();
 
-     // Begin General Settings
+    // Begin General Settings
     $options[] = array(
 		'name' => __('General Settings', 'options_check'),
 		'type' => 'heading');
@@ -79,6 +79,36 @@ function optionsframework_options() {
 		"name" => "Logo",
 		"desc" => "Upload your logo here.",
 		"id" => "logo",
+		"type" => "upload" );
+
+    // Begin General Settings
+    $options[] = array(
+		'name' => __('Homepage', 'options_check'),
+		'type' => 'heading');
+
+    $options[] = array(
+		"name" => "Feature Box Heading",
+		"desc" => "The heading for the homepage feature box.",
+		"id" => "feature-box-heading",
+		"type" => "text" );
+
+    $options[] = array(
+		"name" => "Feature Box Sub-Heading",
+		"desc" => "The sub-heading for the homepage feature box.",
+		"id" => "feature-box-subheading",
+		"type" => "text" );
+
+    $options[] = array(
+		'name' => __('Feature Box Page', 'options_check'),
+		'desc' => __('What page will this link to?', 'options_check'),
+		'id' => 'feature-box-page',
+		'type' => 'select',
+		'options' => $options_pages);
+
+    $options[] = array(
+		"name" => "Feature Box Image",
+		"desc" => "Upload image for homepage section one here.",
+		"id" => "feature-box-image-one",
 		"type" => "upload" );
 
     // Begin Footer Section
