@@ -10,10 +10,10 @@
 	<?php wp_head() ?>
 
 	<noscript>
-		<link rel="stylesheet" href="css/skel.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/library/dest/css/skel.css" />
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/library/dest/css/style.css" />
 	</noscript>
-	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/library/dest/css/ie/v8.css" /><![endif]-->
 </head>
 
 <?php
