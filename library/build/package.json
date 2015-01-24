@@ -5,6 +5,7 @@
   "devDependencies": {
     "del": "^1.1.0",
     "end-of-stream": "^1.1.0",
+    "gulp": "^3.8.10",
     "gulp-autoprefixer": "0.0.7",
     "gulp-base64": "0.0.3",
     "gulp-changed": "^0.4.1",

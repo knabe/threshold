@@ -213,35 +213,42 @@ function threshold_footer_sections(){
 
     // Start output
     $markup = '';
-    $markup .= '<ul>';
+    $markup .= '<ul class="row">';
 
     foreach($sections as $section => $id){
         // Is the 'enable' box checked?
         if(of_get_option($id)){
-            $markup .= '<li>';
+            $markup .= '<li class="3u" class="row">';
 
             // Will change to corresponding section icons.
-            $markup .= '<div class="p-icon"><span class="fa fa-cog"></span></div>';
-            $markup .= '<span>';
+
 
             if($section == 'footer_address'){
-                $markup .= '<a href="mailto:'. of_get_option($section) .'">' . of_get_option($section) . '</a>';
+                $markup .= '<div class="p-icon 4u"><span class="fa fa-cog"></span></div>';
+                $markup .= '<span class="8u">';
+                $markup .= '<a href="mailto:'. of_get_option($section) .'">' . of_get_option($section) . '</a><br/>';
             }
 
             if($section == 'footer_email'){
+                $markup .= '<div class="p-icon 4u"><span c class="fa fa-anchor"></span></div>';
+                $markup .= '<span class="8u">';
                 $markup .= '<a href="mailto:'. of_get_option($section) .'">' . of_get_option($section) . '</a>';
             }
 
             if($section == 'footer_telephone'){
+                $markup .= '<div class="p-icon 4u"><span class="fa fa-user"></span></div>';
+                $markup .= '<span class="8u">';
                 $markup .= '<a href="tel:'. of_get_option($section) .'">' . of_get_option($section) . '</a>';
             }
 
             // Add social links. Create an array of all enabled social networks?
             if($section == 'footer_social'){
+                $markup .= '<div class="p-icon 4u"><span class="fa fa-envelope"></span></div>';
+                $markup .= '<span class="8u"><br/><br/>';
 
             }
 
-            $markup .= '<span>';
+            $markup .= '</span>';
             $markup .= '</li>';
         }
     }
