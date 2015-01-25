@@ -259,19 +259,19 @@ function threshold_footer_sections(){
 }
 
 
-function threshold_get_feature_box(){
-    $feature_box = array(
-        'heading' => of_get_option('feature-box-heading'),
-        'subheading' => of_get_option('feature-box-subheading'),
-        'image' => of_get_option('feature-box-image-one')
+function threshold_get_feature_banner(){
+    $feature_banner = array(
+        'heading' => of_get_option('feature-banner-heading'),
+        'subheading' => of_get_option('feature-banner-subheading'),
+        'image' => of_get_option('feature-banner-image-one')
     );
 
     $feature_box['page'] = array(
-        'page' => of_get_option('feature-box-page'),
-        'link' => get_permalink(of_get_option('feature-box-page'))
+        'page' => of_get_option('feature-banner-page'),
+        'link' => get_permalink(of_get_option('feature-banner-page'))
     );
 
-    return $feature_box;
+    return $feature_banner;
 }
 
 ?>
