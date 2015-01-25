@@ -95,27 +95,59 @@ function optionsframework_options() {
 
     $options[] = array(
 		"name" => "Feature Banner Heading",
-		"desc" => "The heading for the homepage feature box.",
-		"id" => "feature-box-heading",
+		"desc" => "The heading for the homepage feature banner.",
+		"id" => "feature-banner-heading",
 		"type" => "text" );
 
     $options[] = array(
 		"name" => "Feature Banner Sub-Heading",
-		"desc" => "The sub-heading for the homepage feature box.",
-		"id" => "feature-box-subheading",
+		"desc" => "The sub-heading for the homepage feature banner.",
+		"id" => "feature-banner-subheading",
 		"type" => "text" );
 
     $options[] = array(
 		'name' => __('Feature Banner Page', 'options_check'),
 		'desc' => __('What page will this link to?', 'options_check'),
-		'id' => 'feature-box-page',
+		'id' => 'feature-banner-page',
 		'type' => 'select',
 		'options' => $options_pages);
 
     $options[] = array(
 		"name" => "Feature Banner Image",
 		"desc" => "Upload image for homepage section one here.",
-		"id" => "feature-box-image-one",
+		"id" => "feature-banner-image-one",
+		"type" => "upload" );
+
+    // Enable Feature Section One
+	$options[] = array(
+		'name' => __('Enable Feature Section One', 'options_check'),
+		'id' => 'enable-feature-section-one',
+        'std' => '1',
+		'type' => 'checkbox');
+
+    $options[] = array(
+		"name" => "Feature Section One Heading",
+		"desc" => "The heading for the homepage feature section.",
+		"id" => "feature-section-one-heading",
+		"type" => "text" );
+
+    $options[] = array(
+		"name" => "Feature Section One Description",
+		"desc" => "The description for the homepage feature section.",
+		"id" => "feature-section-one-description",
+		"type" => "textarea" );
+
+    $options[] = array(
+		'name' => __('Feature Section One Page', 'options_check'),
+		'desc' => __('What page will this link to?', 'options_check'),
+		'id' => 'feature-section-one-page',
+		'type' => 'select',
+		'options' => $options_pages);
+
+    $options[] = array(
+		"name" => "Feature Section One Image",
+		"desc" => "Upload image for homepage section one here.",
+		"id" => "feature-section-one-image",
 		"type" => "upload" );
 
     // Begin Footer Section
