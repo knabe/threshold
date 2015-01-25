@@ -274,4 +274,22 @@ function threshold_get_feature_banner(){
     return $feature_banner;
 }
 
+function get_fontawesome_icons(){
+    $pattern = '/\.(fa-(?:\w+(?:-)?)+):before\s+{\s*content:\s*"(.+)";\s+}/';
+    $subject = file_get_contents(get_template_directory_uri() . '/library/dest/css/font-awesome.min.css');
+
+    preg_match_all($pattern, $subject, $matches, PREG_SET_ORDER);
+
+    $icons = array();
+
+    foreach($matches as $match){
+        $icons[$match[1]] = $match[2];
+    }
+
+    $icons = var_export($icons, TRUE);
+    $icons = stripslashes($icons);
+
+    print_r($icons);
+}
+
 ?>
