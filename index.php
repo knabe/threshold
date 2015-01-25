@@ -30,20 +30,21 @@
     </div>
     <!-- /Banner -->
 <?php endif; ?>
-
+<?php if(of_get_option('enable-feature-section-one')): ?>
 <!-- Extra #1 -->
 <div id="extra" class="container">
     <ul>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/library/images/pic03.jpg" alt="" class="image full" /></a></li>
+        <li><a href="<?php echo get_permalink(of_get_option('feature-section-one-page')) ?>"><img src="<?php echo of_get_option('feature-section-one-image') ?>" alt="" class="image full" /></a></li>
         <li>
             <div class="content">
-                <h3>Integer vitae libero acrisus egestas placerat  sollicitudin leo</h3>
-                <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.</p>
-                <a href="#" class="button">More Info</a>
+                <h3><?php echo of_get_option('feature-section-one-heading') ?></h3>
+                <p><?php echo of_get_option('feature-section-one-description') ?></p>
+                <a href="<?php echo get_permalink(of_get_option('feature-section-one-page')) ?>" class="button">More Info</a>
             </div>
         </li>
     </ul>
 </div>
+<?php endif; ?>
 
 <!-- Extra #2 -->
 <div id="extra2" class="container">
