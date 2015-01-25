@@ -1,33 +1,35 @@
 <?php get_header(); ?>
 
-<!-- Banner -->
-<div id="banner" class="container">
-    <div class="row double">
-        <section class="6u">
-            <div id="one">
-                <?php $feature = threshold_get_feature_box(); ?>
-                <header>
-                    <?php if($feature['heading']){ ?>
-                    <h2><?php echo $feature['heading'] ?></h2>
-                    <?php } ?>
+<?php if(of_get_option('enable-feature-banner')): ?>
+    <!-- Banner -->
+    <div id="banner" class="container">
+        <div class="row double">
+            <section class="6u">
+                <div id="one">
+                    <?php $feature = threshold_get_feature_banner(); ?>
+                    <header>
+                        <?php if($feature['heading']){ ?>
+                        <h2><?php echo $feature['heading'] ?></h2>
+                        <?php } ?>
 
-                    <?php if($feature['subheading']){ ?>
-                    <span class="byline"><?php echo $feature['subheading'] ?></span>
-                    <?php } ?>
-                </header>
+                        <?php if($feature['subheading']){ ?>
+                        <span class="byline"><?php echo $feature['subheading'] ?></span>
+                        <?php } ?>
+                    </header>
 
-                <a href="<?php echo $feature['page']['link'] ?>" class="button">Click Here</a>
-            </div>
-        </section>
-        <section class="6u skel-cell-important">
-            <?php if($feature['image']){ ?>
-            <a href="<?php echo $feature['page']['link'] ?>"><img src="<?php echo $feature['image'] ?>" alt="" class="image full" /></a>
-            <?php } ?>
-            </div>
-        </section>
+                    <a href="<?php echo $feature['page']['link'] ?>" class="button">Click Here</a>
+                </div>
+            </section>
+            <section class="6u skel-cell-important">
+                <?php if($feature['image']){ ?>
+                <a href="<?php echo $feature['page']['link'] ?>"><img src="<?php echo $feature['image'] ?>" alt="" class="image full" /></a>
+                <?php } ?>
+                </div>
+            </section>
+        </div>
     </div>
-</div>
-<!-- /Banner -->
+    <!-- /Banner -->
+<?php endif; ?>
 
 <!-- Extra #1 -->
 <div id="extra" class="container">
