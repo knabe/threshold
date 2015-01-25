@@ -81,32 +81,39 @@ function optionsframework_options() {
 		"id" => "logo",
 		"type" => "upload" );
 
-    // Begin General Settings
+    // Begin Homepage
     $options[] = array(
 		'name' => __('Homepage', 'options_check'),
 		'type' => 'heading');
 
+    // Enable Feature Banner
+	$options[] = array(
+		'name' => __('Enable Feature Banner', 'options_check'),
+		'id' => 'enable-feature-banner',
+        'std' => '1',
+		'type' => 'checkbox');
+
     $options[] = array(
-		"name" => "Feature Box Heading",
+		"name" => "Feature Banner Heading",
 		"desc" => "The heading for the homepage feature box.",
 		"id" => "feature-box-heading",
 		"type" => "text" );
 
     $options[] = array(
-		"name" => "Feature Box Sub-Heading",
+		"name" => "Feature Banner Sub-Heading",
 		"desc" => "The sub-heading for the homepage feature box.",
 		"id" => "feature-box-subheading",
 		"type" => "text" );
 
     $options[] = array(
-		'name' => __('Feature Box Page', 'options_check'),
+		'name' => __('Feature Banner Page', 'options_check'),
 		'desc' => __('What page will this link to?', 'options_check'),
 		'id' => 'feature-box-page',
 		'type' => 'select',
 		'options' => $options_pages);
 
     $options[] = array(
-		"name" => "Feature Box Image",
+		"name" => "Feature Banner Image",
 		"desc" => "Upload image for homepage section one here.",
 		"id" => "feature-box-image-one",
 		"type" => "upload" );
