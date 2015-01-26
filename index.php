@@ -87,28 +87,7 @@
         </section>
 
         <section class="8u">
-            <ul class="list">
-                <li>
-                    <h3>Integer vitae libero</h3>
-                    <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae libero luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing</p>
-                    <a href="#" class="button">More Info</a>
-                </li>
-                <li>
-                    <h3>Cras iaculis ultri</h3>
-                    <p>Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis</p>
-                    <a href="#" class="button">More Info</a>
-                </li>
-                <li>
-                    <h3>Nam convallis pelle</h3>
-                    <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem lorem ipsum</p>
-                    <a href="#" class="button">More Info</a>
-                </li>
-                <li>
-                    <h3>Vivamus adipiscing</h3>
-                    <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus ferment</p>
-                    <a href="#" class="button">More Info</a>
-                </li>
-            </ul>
+            <?php threshold_latest_posts(); ?>
         </section>
 
     </div>

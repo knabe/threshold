@@ -78,6 +78,8 @@ function bones_ahoy() {
   // cleaning up excerpt
   add_filter( 'excerpt_more', 'bones_excerpt_more' );
 
+add_filter( 'excerpt_length', function(){ return 25; }, 999 );
+
 } /* end bones ahoy */
 
 add_action( 'after_setup_theme', 'bones_ahoy' );
@@ -274,6 +276,24 @@ function threshold_get_feature_banner(){
     return $feature_banner;
 }
 
+function threshold_latest_posts(){
+    $recent = new WP_Query( 'showposts=4' );
+
+    if ($recent->have_posts()): ?>
+        <ul class="list">
+            <?php while ($recent->have_posts()) : $recent->the_post() ?>
+                <li>
+                    <h3><?php if(!is_single()): ?><a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php endif; the_title() ?><?php if(!is_single()): ?></a><?php endif; ?></h3>
+
+                    <?php (is_single()) ? the_content() : the_excerpt() ?>
+
+                    <a href="<?php the_permalink() ?>" class="button">Read More</a>
+                </li>
+            <?php endwhile; ?>
+        </ul>
+    <?php endif;
+}
+
 function get_fontawesome_icons(){
     $pattern = '/\.(fa-(?:\w+(?:-)?)+):before\s+{\s*content:\s*"(.+)";\s+}/';
     $subject = file_get_contents(get_template_directory_uri() . '/library/dest/css/font-awesome.min.css');
@@ -286,10 +306,7 @@ function get_fontawesome_icons(){
         $icons[$match[1]] = $match[2];
     }
 
-    $icons = var_export($icons, TRUE);
-    $icons = stripslashes($icons);
-
-    print_r($icons);
+    return $icons;
 }
 
 ?>
